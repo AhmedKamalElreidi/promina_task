@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="428" height="926" viewBox="0 0 428 926">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.113" y1="0.117" x2="0.718" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ffcd62"/>
+      <stop offset="1" stop-color="#fea12f"/>
+    </linearGradient>
+    <filter id="Ellipse_45" x="187.759" y="357.632" width="219.908" height="219.908" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="11" result="blur"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_46" x="240.652" y="430.26" width="182.023" height="182.023" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="11" result="blur-2"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_47" x="160.939" y="351.368" width="182.023" height="182.023" filterUnits="userSpaceOnUse">
+      <feOffset dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="11" result="blur-3"/>
+      <feFlood flood-opacity="0.102"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-3" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#eb5757"/>
+      <stop offset="1" stop-color="#fdb2b2"/>
+    </linearGradient>
+    <clipPath id="clip-gellary_">
+      <rect width="428" height="926"/>
+    </clipPath>
+  </defs>
+  <g id="gellary_" data-name="gellary " clip-path="url(#clip-gellary_)">
+    <rect width="428" height="926" fill="#fff"/>
+    <g id="Group_11" data-name="Group 11">
+      <g id="Group_10" data-name="Group 10">
+        <ellipse id="Ellipse_1628" data-name="Ellipse 1628" cx="234.063" cy="275.158" rx="234.063" ry="275.158" transform="translate(-190 170.372)" fill="#ea94d7"/>
+        <ellipse id="Ellipse_1629" data-name="Ellipse 1629" cx="269.333" cy="316.62" rx="269.333" ry="316.62" transform="translate(-50.203 343.759)" fill="#ffdada"/>
+        <ellipse id="Ellipse_1627" data-name="Ellipse 1627" cx="269.333" cy="316.62" rx="269.333" ry="316.62" transform="translate(0 -72.241)" fill="#ddcdff"/>
+      </g>
+      <path id="Frame" d="M0,0H428V1386H0Z" transform="translate(-1)" fill="none"/>
+    </g>
+    <g id="Group_9" data-name="Group 9">
+      <path id="Vector_2009" data-name="Vector 2009" d="M4.188,115.49c-8.255-5.245-9.906-24.033,49.528-57.221C76.309,45.653,84.107,37.307,82.494,15.83,81.222-1.11,156.92-16.023,245.8,35.858,281.72,57,293.557,108.91,236.724,137.744c-98.589,50.02-161.592,66.916-193.718,34.49-13.029-13.15-1.2-28.038-11.378-42.916-3.123-4.567-15.118-6-27.441-13.828Z" transform="translate(-24.261 215.459)" fill="none" stroke="#fafafa" stroke-width="1"/>
+      <path id="Vector_2013" data-name="Vector 2013" d="M3.812,104.907C-3.7,100.142-5.206,83.077,48.9,52.93,69.471,41.469,76.57,33.888,75.1,14.38,73.944-1.009,142.858-14.555,223.775,32.572c32.7,19.2,43.475,66.358-8.264,92.55C125.757,170.558,68.4,185.905,39.152,156.451c-11.861-11.945-1.1-25.469-10.358-38.983-2.843-4.149-13.763-5.448-24.982-12.561Z" transform="translate(-12.084 224.407)" fill="none" stroke="#fafafa" stroke-width="1"/>
+      <path id="Vector_2014" data-name="Vector 2014" d="M3.232,88.99C-3.139,84.948-4.413,70.472,41.453,44.9c17.436-9.722,23.454-16.152,22.209-32.7C62.681-.856,121.1-12.346,189.69,27.63c27.719,16.289,36.853,56.29-7.005,78.508C106.6,144.68,57.981,157.7,33.189,132.714c-10.055-10.133-.93-21.6-8.781-33.068C22,96.126,12.741,95.024,3.232,88.99Z" transform="translate(7.056 237.421)" fill="none" stroke="#fafafa" stroke-width="1"/>
+      <path id="Vector_2010" data-name="Vector 2010" d="M4.691,128.122c-9.248-5.819-11.1-26.661,55.486-63.48,25.312-14,34.048-23.255,32.241-47.081C90.993-1.232,175.8-17.775,275.372,39.78c40.24,23.452,53.5,81.042-10.169,113.03C154.753,208.3,84.17,227.044,48.18,191.072c-14.6-14.589-1.35-31.105-12.747-47.61-3.5-5.067-16.936-6.654-30.742-15.341Z" transform="translate(-40.866 205.131)" fill="none" stroke="#fafafa" stroke-width="1"/>
+      <path id="Vector_2011" data-name="Vector 2011" d="M5.211,143.461c-10.272-6.516-12.326-29.853,61.63-71.079,28.115-15.672,37.818-26.039,35.812-52.717C101.07-1.379,195.265-19.9,305.866,44.542c44.7,26.26,59.424,90.744-11.3,126.562-122.68,62.134-201.079,83.122-241.056,42.843-16.213-16.335-1.5-34.829-14.158-53.31-3.886-5.673-18.812-7.45-34.146-17.177Z" transform="translate(-57.471 192.59)" fill="none" stroke="rgba(250,250,250,0.9)" stroke-width="1"/>
+      <path id="Vector_2012" data-name="Vector 2012" d="M5.636,155.19C-5.474,148.142-7.7,122.9,72.293,78.3c30.408-16.953,40.9-28.168,38.733-57.027-1.712-22.764,100.166-42.8,219.79,26.912,48.342,28.407,64.272,98.164-12.217,136.91C185.912,252.308,101.118,275.011,57.88,231.44c-17.535-17.671-1.621-37.677-15.313-57.668-4.2-6.137-20.346-8.06-36.931-18.582Z" transform="translate(-72 183)" fill="none" stroke="rgba(250,250,250,0.7)" stroke-width="1"/>
+    </g>
+    <rect id="Rectangle_34624640" data-name="Rectangle 34624640" width="428" height="414" transform="translate(-1 512)" fill="url(#linear-gradient)"/>
+    <g id="Group_8" data-name="Group 8">
+      <circle id="Ellipse_33" data-name="Ellipse 33" cx="52.103" cy="52.103" r="52.103" transform="matrix(0.766, 0.642, -0.642, 0.766, 311.483, 355.596)" fill="url(#linear-gradient-2)"/>
+      <g id="Union">
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_45)">
+          <circle id="Ellipse_45-2" data-name="Ellipse 45" cx="54.625" cy="54.625" r="54.625" transform="matrix(0.77, 0.64, -0.64, 0.77, 290.95, 386.63)" fill="rgba(255,255,255,0.5)"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_46)">
+          <circle id="Ellipse_46-2" data-name="Ellipse 46" cx="41.178" cy="41.178" r="41.178" transform="matrix(0.77, 0.64, -0.64, 0.77, 326.56, 459.26)" fill="rgba(255,255,255,0.5)"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Ellipse_47)">
+          <circle id="Ellipse_47-2" data-name="Ellipse 47" cx="41.178" cy="41.178" r="41.178" transform="matrix(0.77, 0.64, -0.64, 0.77, 246.85, 380.37)" fill="rgba(255,255,255,0.5)"/>
+        </g>
+      </g>
+    </g>
+    <rect id="Image" width="156.213" height="156.213" rx="8" transform="translate(61.164 337) rotate(21.465)" fill="none"/>
+    <g id="Group_7" data-name="Group 7">
+      <g id="Group_6" data-name="Group 6">
+        <rect id="Rectangle_12" data-name="Rectangle 12" width="97.633" height="78.107" rx="4" transform="translate(75.918 379.52) rotate(21.465)" fill="url(#linear-gradient-3)"/>
+        <circle id="Ellipse_62" data-name="Ellipse 62" cx="7.322" cy="7.322" r="7.322" transform="translate(84.188 398.508) rotate(21.465)" fill="#fff"/>
+      </g>
+      <g id="Union-2" data-name="Union">
+        <path id="Vector_2" data-name="Vector 2" d="M0,39.053,26.849,0,53.7,39.053Z" transform="translate(67.14 428.523) rotate(21.465)" fill="rgba(253,178,178,0.4)"/>
+        <path id="Vector_3" data-name="Vector 3" d="M0,48.817,34.172,0,68.343,48.817Z" transform="translate(88.885 426.582) rotate(21.465)" fill="rgba(253,178,178,0.4)"/>
+      </g>
+    </g>
+    <g id="Group_5" data-name="Group 5">
+      <g id="Group_4" data-name="Group 4">
+        <rect id="Rectangle_12-2" data-name="Rectangle 12" width="90.938" height="84.875" rx="3" transform="matrix(0.956, 0.292, -0.292, 0.956, 184.29, 650.573)" fill="url(#linear-gradient-3)"/>
+        <path id="Polygon_1" data-name="Polygon 1" d="M21.822,3.031a6.062,6.062,0,0,1,10.5,0l21,36.375a6.062,6.062,0,0,1-5.25,9.094h-42a6.062,6.062,0,0,1-5.25-9.094Z" transform="matrix(0.292, -0.956, 0.956, 0.292, 226.96, 739.222)" fill="rgba(253,178,178,0.4)"/>
+      </g>
+      <circle id="Ellipse_62-2" data-name="Ellipse 62" cx="9.094" cy="9.094" r="9.094" transform="matrix(0.956, 0.292, -0.292, 0.956, 192.348, 665.71)" fill="#fff"/>
+    </g>
+    <path id="Vector" d="M860.076.01h25.862L471.507.024H419.781L5.286.011H249.971V0H641.315V.01Z" transform="translate(63 1078.62) rotate(-90)" fill="#fff"/>
+  </g>
+</svg>
