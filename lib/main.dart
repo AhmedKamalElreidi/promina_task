@@ -1,3 +1,5 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,14 +21,18 @@ void main() async {
   // await SecureStorage.deleteData(key: SecureKey.token);
   SecureVariables.token = await SecureStorage.getData(key: SecureKey.token);
   runApp(
-      // DevicePreview(
-      //   enabled: !kReleaseMode,
-      //   builder: (_) => const MyApp(),
-      // ),
-      BlocProvider(
-    create: (context) => GalleryCubit()..getGalleryImages(),
-    child: const MyApp(),
-  ));
+          DevicePreview(
+            enabled: !kReleaseMode,
+            builder: (_) =>  BlocProvider(
+        create: (context) => GalleryCubit()..getGalleryImages(),
+        child: const MyApp(),
+      )),
+
+  //     BlocProvider(
+  //   create: (context) => GalleryCubit()..getGalleryImages(),
+  //   child: const MyApp(),
+  // )
+  );
 }
 
 class MyApp extends StatelessWidget {

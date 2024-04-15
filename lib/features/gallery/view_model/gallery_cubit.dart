@@ -28,48 +28,53 @@ class GalleryCubit extends Cubit<GalleryState> {
     }
   }
 
-  // // Profile Pic
-  // File? profilePic;
-  // uploadProfilePic(File? image) {
-  //   profilePic = File(image!.path);
-  //   emit(PickedImageSuccess());
-  // }
-  File? file;
 
-  Future<void> pickFromGallery({required BuildContext context}) async {
+  File? selectedImage; 
+
+ Future<void> pickFromGallery({required BuildContext context}) async {
+  try {
     final pickedFile = await ImagePicker().pickImage(
       source: ImageSource.gallery,
       imageQuality: 60,
     );
     if (pickedFile == null) return;
-    file = File(pickedFile.path);
-    emit(PickedImageSuccess());
+    selectedImage = File(pickedFile.path);
+    emit(PickedImageSuccess()); 
+  } on Exception catch (error) {
+  
+    print(error.toString()); 
+    emit(ImagePickerErrorState(error: error.toString())); 
   }
+}
 
   Future<void> uploadImage() async {
     emit(AddImagesLoadingState());
-    final response = await DioHelper.postDataImage(
-        url: EndPoints.uploadImage,
-        token: SecureVariables.token,
-        data: {
-          "img": file == null ? null : await MultipartFile.fromFile(file!.path)
-        });
-    if (response.statusCode == 200) {
-      emit(AddImagesSuccessState());
-    } else {
-      emit(AddImagesErrorState(error: response.statusMessage!));
+
+    try {
+      if (selectedImage == null) {
+        throw Exception(
+            'No image selected for upload'); 
+      }
+      final multipartFile = await MultipartFile.fromFile(selectedImage!.path);
+      final dioBody = {
+        "img": multipartFile, 
+      };
+      final response = await DioHelper.postData(
+          url: EndPoints.uploadImage,
+          token: SecureVariables.token,
+          data: FormData.fromMap(dioBody));
+
+      if (response.statusCode == 200) {
+        emit(AddImagesSuccessState());
+      } else {
+        emit(AddImagesErrorState(error: response.statusMessage!));
+      }
+    } on Exception catch (error) {
+      print(error.toString()); 
+      emit(UploadImageErrorState(
+          error: error.toString())); 
     }
   }
 
-  // File? file;
-  // Future<void> pickImageFrom({required ImageSource type}) async {
-  //   final pickedFile = await ImagePicker().pickImage(
-  //     source: type,
-  //     imageQuality: 60,
-  //   );
-  //   if (pickedFile == null && pickedFile?.path == null) return;
-  //   file = File(pickedFile.path);
-  //   emit(PickedImageSuccess());
-  // }
+
 }
-    //    data: {"img": await AppFunctions.uploadImageToAPI(profilePic!)});
