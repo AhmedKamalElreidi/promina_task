@@ -10,7 +10,7 @@ class GalleryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => GalleryCubit(),
+      create: (context) => GalleryCubit()..getGalleryImages(),
       child: const Scaffold(
         body: SafeArea(child: GalleryViewBody()),
       ),

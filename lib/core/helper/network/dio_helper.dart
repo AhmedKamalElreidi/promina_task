@@ -22,7 +22,34 @@ class DioHelper {
         compact: true,
         maxWidth: 90));
   }
+  //************************************  postdata  *********************************
 
+  static Future<Response> postDataImage({
+    required String url,
+    Map<String, dynamic>? query,
+    dynamic data,
+    String lang = 'en',
+    String? token,
+  }) async {
+    try {
+      dio.options.headers = {
+        'Authorization': 'Bearer $token',
+        "Accept": "application/json",
+        "Content-Type":"multipart/form-data"
+      };
+      return await dio.post(url,
+          queryParameters: query,
+          data: data,
+          options: Options(
+            validateStatus: (_) => true,
+            contentType: data.multipartFormDataContentType,
+            responseType: ResponseType.json,
+          ));
+    } catch (error) {
+      print(error.toString());
+      rethrow;
+    }
+  }
   //************************************  postdata  *********************************
 
   static Future<Response> postData({
@@ -34,7 +61,7 @@ class DioHelper {
   }) async {
     try {
       dio.options.headers = {
-        'Authorization': 'bearer $token',
+        'Authorization': 'Bearer $token',
         "Accept": "application/json"
       };
       return await dio.post(url,
@@ -42,7 +69,7 @@ class DioHelper {
           data: data,
           options: Options(
             validateStatus: (_) => true,
-            contentType: Headers.jsonContentType,
+            contentType: Headers.formUrlEncodedContentType,
             responseType: ResponseType.json,
           ));
     } catch (error) {
@@ -61,7 +88,7 @@ class DioHelper {
   }) async {
     try {
       dio.options.headers = {
-        'Authorization': 'bearer $token',
+        'Authorization': 'Bearer $token',
         "Accept": "application/json"
       };
       return await dio.get(url,

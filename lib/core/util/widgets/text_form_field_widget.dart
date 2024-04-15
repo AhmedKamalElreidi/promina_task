@@ -16,10 +16,10 @@ class CustomTextFormField extends StatelessWidget {
     required this.validator,
     required this.keyboardType,
   });
-
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      autofocus: true,
       validator: validator,
       controller: controller,
       keyboardType: keyboardType,

@@ -28,22 +28,38 @@ class GalleryCubit extends Cubit<GalleryState> {
     }
   }
 
-  // Future<void> uploadImage() async {
-  //   emit(AddImagesLoadingState());
-  //   String fileName = file!.path.split('/').last;
-  //   FormData formData = FormData.fromMap({
-  //     "img": await MultipartFile.fromFile(file!.path, filename: fileName),
-  //   });
-  //   final response = await DioHelper.postData(
-  //       url: EndPoints.uploadImage,
-  //       token: SecureVariables.token,
-  //       data: formData);
-  //   if (response.statusCode == 200) {
-  //     emit(AddImagesSuccessState());
-  //   } else {
-  //     emit(AddImagesErrorState(error: ''));
-  //   }
+  // // Profile Pic
+  // File? profilePic;
+  // uploadProfilePic(File? image) {
+  //   profilePic = File(image!.path);
+  //   emit(PickedImageSuccess());
   // }
+  File? file;
+
+  Future<void> pickFromGallery({required BuildContext context}) async {
+    final pickedFile = await ImagePicker().pickImage(
+      source: ImageSource.gallery,
+      imageQuality: 60,
+    );
+    if (pickedFile == null) return;
+    file = File(pickedFile.path);
+    emit(PickedImageSuccess());
+  }
+
+  Future<void> uploadImage() async {
+    emit(AddImagesLoadingState());
+    final response = await DioHelper.postDataImage(
+        url: EndPoints.uploadImage,
+        token: SecureVariables.token,
+        data: {
+          "img": file == null ? null : await MultipartFile.fromFile(file!.path)
+        });
+    if (response.statusCode == 200) {
+      emit(AddImagesSuccessState());
+    } else {
+      emit(AddImagesErrorState(error: response.statusMessage!));
+    }
+  }
 
   // File? file;
   // Future<void> pickImageFrom({required ImageSource type}) async {
@@ -51,8 +67,9 @@ class GalleryCubit extends Cubit<GalleryState> {
   //     source: type,
   //     imageQuality: 60,
   //   );
-  //   if (pickedFile == null) return;
+  //   if (pickedFile == null && pickedFile?.path == null) return;
   //   file = File(pickedFile.path);
   //   emit(PickedImageSuccess());
   // }
 }
+    //    data: {"img": await AppFunctions.uploadImageToAPI(profilePic!)});

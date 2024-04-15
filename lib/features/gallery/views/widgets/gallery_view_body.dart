@@ -1,14 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:promina_task/core/util/app_images/app_images.dart';
 import 'package:promina_task/core/util/spaces/spaces.dart';
+import 'package:promina_task/features/gallery/view_model/gallery_cubit.dart';
 
 import 'custom_gallary_header.dart';
 import 'custom_gallery_list.dart';
 import 'custom_gallery_upload_and_logout.dart';
 
-class GalleryViewBody extends StatelessWidget {
+class GalleryViewBody extends StatefulWidget {
   const GalleryViewBody({super.key});
+
+  @override
+  State<GalleryViewBody> createState() => _GalleryViewBodyState();
+}
+
+class _GalleryViewBodyState extends State<GalleryViewBody> {
+  @override
+  void initState() {
+    context.read<GalleryCubit>().getGalleryImages();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

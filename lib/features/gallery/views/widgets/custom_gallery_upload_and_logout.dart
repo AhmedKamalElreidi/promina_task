@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:promina_task/core/util/app_images/app_images.dart';
 import 'package:promina_task/core/util/spaces/spaces.dart';
 import 'package:promina_task/features/gallery/view_model/gallery_cubit.dart';
@@ -35,10 +34,22 @@ class CustomGalleryUploadAndLogout extends StatelessWidget {
                       galleryFunc: () {
                         // cubit.pickImageFrom(type: ImageSource.gallery);
                         // cubit.uploadImage();
+                        // ImagePicker()
+                        //     .pickImage(source: ImageSource.gallery)
+                        //     .then((value) =>
+                        //         cubit.uploadProfilePic(value! as File?));
+                        cubit.pickFromGallery(context: context);
+                        Navigator.pop(context);
                       },
                       cameraFunc: () {
-                        // cubit.pickImageFrom(type: ImageSource.camera);
+                        //          cubit.pickImageFrom(type: ImageSource.camera);
                         // cubit.uploadImage();
+                        // ImagePicker()
+                        //     .pickImage(source: ImageSource.camera)
+                        //     .then((value) =>
+                        //         cubit.uploadProfilePic(value as File?));
+                        cubit.pickFromGallery(context: context);
+                        Navigator.pop(context);
                       },
                     ),
                   );

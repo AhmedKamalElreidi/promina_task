@@ -5,19 +5,21 @@ class GalleryModel {
 
   GalleryModel({this.status, this.data, this.message});
 
-  factory GalleryModel.fromJson(Map<String, dynamic> json) => GalleryModel(
-        status: json['status'] as String?,
-        data: json['data'] == null
-            ? null
-            : Data.fromJson(json['data'] as Map<String, dynamic>),
-        message: json['message'] as String?,
-      );
+  GalleryModel.fromJson(Map<String, dynamic> json) {
+    status = json['status'];
+    data = json['data'] != null ? Data.fromJson(json['data']) : null;
+    message = json['message'];
+  }
 
-  Map<String, dynamic> toJson() => {
-        'status': status,
-        'data': data?.toJson(),
-        'message': message,
-      };
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['status'] = status;
+    if (this.data != null) {
+      data['data'] = this.data?.toJson();
+    }
+    data['message'] = message;
+    return data;
+  }
 }
 
 class Data {
@@ -25,11 +27,13 @@ class Data {
 
   Data({this.images});
 
-  factory Data.fromJson(Map<String, dynamic> json) => Data(
-        images: json['images'] as List<String>?,
-      );
+  Data.fromJson(Map<String, dynamic> json) {
+    images = json['images'].cast<String>();
+  }
 
-  Map<String, dynamic> toJson() => {
-        'images': images,
-      };
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['images'] = images;
+    return data;
+  }
 }

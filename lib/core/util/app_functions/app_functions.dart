@@ -1,5 +1,7 @@
+import 'dart:io';
 import 'dart:ui';
 
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -30,6 +32,11 @@ class AppFunctions {
     } else {
       return "";
     }
+  }
+
+  static Future uploadImageToAPI(File image) async {
+    return MultipartFile.fromFile(image.path,
+        filename: image.path.split('/').last);
   }
 
   static Future<String> showTimePickerComponent({required context}) async {
